@@ -1,0 +1,33 @@
+{
+  "name": "Produto",
+  "plural": "Produtos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "codigo": {
+      "type": "string",
+      "required": true
+    },
+    "descricao": {
+      "type": "string",
+      "required": true
+    },
+    "preco": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "marca": {
+      "type": "belongsTo",
+      "model": "Marca",
+      "foreignKey": "_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
